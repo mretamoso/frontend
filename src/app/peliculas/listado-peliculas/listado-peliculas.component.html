@@ -1,0 +1,25 @@
+<p>listado-peliculas works!</p>
+
+<div *ngIf="!peliculas">
+    <img
+        src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=6c09b9527vju7mjakjwwe4xaiikorv4mr1l6utuvgjwgulal&rid=200w.gif&ct=g">
+</div>
+<div *ngIf="peliculas?.length === 0">
+    <p>No hay peliculas para mostrar</p>
+</div>
+<ng-container *ngIf="peliculas && peliculas.length > 1">
+    <div *ngFor="let pelicula of peliculas; 
+    let index = index" class="pelicula-contenedor">
+
+        <div> Pelicula {{index+1}}:{{pelicula.titulo}}
+            <button style="margin-left: 1rem;" (click)="remover(index)">Remover</button>
+        </div>
+        <div>
+            {{pelicula.fechaLanzamiento | date:"dd-MMMM-yyyy" | uppercase}}
+        </div>
+        <div>
+            {{pelicula.precio | currency}}
+        </div>
+
+    </div>
+</ng-container>
