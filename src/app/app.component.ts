@@ -24,32 +24,13 @@ export class AppComponent implements OnInit {
         fechaLanzamiento: new Date('2016-11-14'),
         precio: 865.00
       }]
-    }, 1000);
+    }, 3000);
   }
   title = 'frontend como quiero eh';
 
   peliculasEnCines;
 
-  peliculasProximosEstrenos = [{
-    titulo: 'Coco',
-    fechaLanzamiento: new Date(),
-    precio: 1400.99
-  },
-  {
-    titulo: 'Luna',
-    fechaLanzamiento: new Date(),
-    precio: 2000.00
-  },
-  {
-    titulo: 'Varyan',
-    fechaLanzamiento: new Date('2016-11-14'),
-    precio: 865.00
-  },
-  {
-    titulo: 'KiroBeagles',
-    fechaLanzamiento: new Date('2016-11-14'),
-    precio: 865.00
-  }]
+  peliculasProximosEstrenos = [];
 
 
   duplicarNumero(valor: number): number {
